@@ -66,7 +66,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raise_layer {
+        symbols_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -75,11 +75,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp N6       &kp N7        &kp N8        &kp N9        &kp N0        &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans       &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS  &kp MINUS     &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH
-                        &trans  &trans  &trans  &trans    &trans  &trans       &trans        &trans
+&trans     &kp F1       &kp F2       &kp F3        &kp F4         &kp F5                                    &kp F6                 &kp F7  &kp F8  &kp F9  &kp F10        &trans
+&kp TILDE  &kp EXCL     &kp AT_SIGN  &kp ASTERISK  &kp AMPERSAND  &kp LBKT                                  &kp RIGHT_BRACE        &kp N7  &kp N8  &kp N9  &kp COLON      &kp PLUS
+&trans     &kp PERCENT  &kp CARET    &kp HASH      &kp DOLLAR     &kp LBKT                                  &kp RIGHT_BRACKET      &kp N4  &kp N5  &kp N6  &kp NUMBER_0   &kp GRAVE
+&trans     &trans       &trans       &fat_arrow    &arrow         &kp LEFT_PARENTHESIS  &kp F11    &kp F12  &kp RIGHT_PARENTHESIS  &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &kp PIPE
+                                     &trans        &trans         &trans                &trans     &trans   &trans                 &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
