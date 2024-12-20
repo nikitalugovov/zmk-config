@@ -25,6 +25,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        jk-escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <32 31>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -37,11 +47,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp GRAVE   &kp LC(N1)  &kp LC(N2)  &kp LG(SPACE)  &kp LC(N4)    &kp LC(N5)                                 &kp LC(N6)            &kp LC(N7)  &kp LC(SPACE)  &kp LC(NUMBER_9)  &kp LC(NUMBER_0)            &kp LS(LG(M))
-&kp TAB     &kp Q       &kp W       &kp E          &kp R         &kp T                                      &kp Y                 &kp U       &kp I          &kp O             &kp P                       &kp EQUAL
-&kp ESCAPE  &lt 1 A     &kp S       &kp D          &kp F         &kp G                                      &kp H                 &kp J       &kp K          &kp L             &mt LEFT_CONTROL SEMICOLON  &kp SQT
-&sl 2       &kp Z       &kp X       &kp C          &kp V         &kp B       &kp BACKSPACE     &kp ENTER    &kp N                 &kp M       &kp COMMA      &kp DOT           &kp SLASH                   &kp MINUS
-                                    &none          &kp LEFT_ALT  &kp LGUI    &kp LEFT_SHIFT    &lt 1 SPACE  &kp LA(LEFT_CONTROL)  &kp LCTRL   &none
+&kp GRAVE   &kp LC(N1)  &kp LC(N2)  &kp LG(SPACE)  &kp LC(N4)    &kp LC(N5)                                 &kp LC(N6)            &kp LC(N7)  &kp LC(SPACE)  &kp LC(NUMBER_9)  &kp LC(NUMBER_0)  &kp LS(LG(M))
+&kp TAB     &kp Q       &kp W       &kp E          &kp R         &kp T                                      &kp Y                 &kp U       &kp I          &kp O             &kp P             &kp EQUAL
+&kp ESCAPE  &lt 1 A     &kp S       &kp D          &kp F         &kp G                                      &kp H                 &kp J       &kp K          &kp L             &kp SEMICOLON     &kp SQT
+&sl 2       &kp Z       &kp X       &kp C          &kp V         &kp B       &kp BACKSPACE     &kp ENTER    &kp N                 &kp M       &kp COMMA      &kp DOT           &kp SLASH         &kp MINUS
+                                    &kp LEFT_ALT   &kp LEFT_ALT  &kp LGUI    &kp LEFT_SHIFT    &lt 1 SPACE  &kp LA(LEFT_CONTROL)  &kp LCTRL   &kp LCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -60,7 +70,7 @@
 &trans  &trans        &trans        &trans                &trans  &trans                                   &kp LA(LEFT)  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)  &kp LA(RIGHT)  &trans      &kp C_VOL_UP
 &trans  &trans        &trans        &trans                &trans  &trans                                   &kp LEFT      &kp DOWN            &kp UP_ARROW      &kp RIGHT      &trans      &kp C_VOLUME_DOWN
 &trans  &trans        &trans        &trans                &trans  &trans             &kp DELETE    &trans  &kp LC(LEFT)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans      &trans
-                                    &trans                &trans  &kp RIGHT_CONTROL  &trans        &trans  &trans        &kp RIGHT_GUI       &trans
+                                    &trans                &trans  &kp RIGHT_CONTROL  &trans        &trans  &trans        &kp RIGHT_GUI       &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
