@@ -25,15 +25,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        jk-escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <32 31>;
-            layers = <0 1 2 3>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
